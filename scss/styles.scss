@@ -1,0 +1,118 @@
+@use 'colors' as *;
+
+$h3-font-size: 1.3rem;
+$h3-line-height: 1.6;
+$h3-padding-y: .25rem;
+
+// selecting by id provides necessary specifity
+#lytix {
+    .content.widget-error {
+        opacity: 0.5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    h2 {
+        font-size: 2.4rem;
+        font-weight: 600;
+    }
+
+    h3 {
+        font-size: $h3-font-size;
+        line-height: $h3-line-height;
+        font-weight: 700;
+        background-color: $title-background;
+        padding: $h3-padding-y 1rem;
+        margin: 0;
+    }
+    td,
+    th {
+        vertical-align: middle;
+    }
+}
+
+#overview {
+    $widget-margin-bottom: 2rem;
+    $content-height: 14rem;
+    $widget-height: $h3-font-size * $h3-line-height + 2 * $h3-padding-y + $content-height;
+    .widget {
+        min-width: 10rem;
+        max-width: 40rem;
+        box-shadow: 0 0 30px 5px #fff; // this increases the contrast to the background
+        .content {
+            height: $content-height;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    .widgets {
+        // As widgets are not all equally wide, we subtly create rows
+        // in the background to compensate for the visual imbalance.
+        $bg-color: #fcfcfd;
+        background:
+            repeating-linear-gradient(
+                $bg-color 0,
+                $bg-color $widget-height,
+                #0000 $widget-height,
+                #0000 $widget-height + $widget-margin-bottom
+            );
+        & > div {
+            margin: 0 2rem $widget-margin-bottom 0;
+        }
+    }
+
+    .content.widget-error {
+        max-width: 20em;
+    }
+}
+
+.widget {
+    background-color: $widget-background;
+
+    .content {
+        //padding: 1em;
+        opacity: 1;
+        transition: opacity 1s;
+        overflow: auto;
+    }
+
+    &.loading {
+        background:
+            linear-gradient(
+                0deg,
+                #ddd 0%,
+                whitesmoke 45%,
+                whitesmoke 55%,
+                #ddd 100%
+            );
+        background-size: 100% 200%;
+        animation: loading 1s linear infinite alternate;
+        .content {
+            opacity: 0;
+        }
+    }
+
+    @keyframes loading {
+        0% {
+            background-position-y: 100%;
+        }
+        50% {
+            background-position-y: 50%;
+        }
+        100% {
+            background-position-y: 0%;
+        }
+    }
+
+    .chart svg {
+        display: block;
+    }
+}
+
+.content.widget-error {
+    width: 100%;
+}

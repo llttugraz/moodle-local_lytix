@@ -1,0 +1,112 @@
+#lytix .content.widget-error {
+    opacity: 0.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+#lytix h2 {
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+
+#lytix h3 {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    font-weight: 700;
+    background-color: #e7f0f1;
+    padding: 0.25rem 1rem;
+    margin: 0;
+}
+
+#lytix td,
+#lytix th {
+    vertical-align: middle;
+}
+
+#overview .widget {
+    min-width: 10rem;
+    max-width: 40rem;
+    box-shadow: 0 0 30px 5px #fff;
+}
+
+#overview .widget .content {
+    height: 14rem;
+}
+
+#overview .widget:last-child {
+    margin-right: 0;
+}
+
+#overview .widgets {
+    background: repeating-linear-gradient(#fcfcfd 0, #fcfcfd 16.58rem, rgba(0, 0, 0, 0) 16.58rem, rgba(0, 0, 0, 0) 18.58rem);
+}
+
+#overview .widgets > div {
+    margin: 0 2rem 2rem 0;
+}
+
+#overview .content.widget-error {
+    max-width: 20em;
+}
+
+.widget {
+    background-color: #fbfafa;
+}
+
+.widget .content {
+    opacity: 1;
+    transition: opacity 1s;
+    overflow: auto;
+}
+
+.widget.loading {
+    background: linear-gradient(0deg, #ddd 0%, whitesmoke 45%, whitesmoke 55%, #ddd 100%);
+    background-size: 100% 200%;
+    animation: loading 1s linear infinite alternate;
+}
+
+.widget.loading .content {
+    opacity: 0;
+}
+
+@keyframes loading {
+    0% {
+        background-position-y: 100%;
+    }
+    50% {
+        background-position-y: 50%;
+    }
+    100% {
+        background-position-y: 0%;
+    }
+}
+
+.widget .chart svg {
+    display: block;
+}
+
+.content.widget-error {
+    width: 100%;
+}
+
+#page-admin-setting-local_lytix .modal-content {
+    height: calc(100vh - 3.5rem);
+}
+
+#page-admin-setting-local_lytix .form-inline[data-fieldtype="autocomplete"] {
+    display: flex;
+}
+
+#page-admin-setting-local_lytix div.form-autocomplete-selection {
+    order: 2;
+}
+
+#page-admin-setting-local_lytix div.d-md-inline-block {
+    order: 1;
+}
+
+#page-admin-setting-local_lytix ul.form-autocomplete-suggestions {
+    margin-top: 48px;
+}
