@@ -13,7 +13,7 @@
     ],
     "description": "Learning Analytics plugin",
     "keywords": ["learnerscorner", "LA", "Learning Analytics"], 
-    "name": "llt-plugindev/moodle-local_lytix",
+    "name": "llt-tugraz/moodle-local_lytix",
     "require": {
         "moodle/moodle": "3.11 - 4.1"
     },
