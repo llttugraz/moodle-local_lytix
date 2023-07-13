@@ -45,8 +45,8 @@ function local_lytix_extend_navigation_course($navigation, $course, $context) {
         if (\local_lytix\helper\plugin_check::is_installed('planner')) {
             $show = true;
         } else {
-            $iscreator = is_enrolled($context, $USER->id) && \lytix_config\render_view::is_creator($context, $USER->id);
-            if ((get_config('local_lytix', 'platform') == 'creators_dashboard') & $iscreator) {
+            $iscreator = \lytix_config\render_view::is_creator($context, $USER->id);
+            if ((get_config('local_lytix', 'platform') == 'creators_dashboard') && $iscreator) {
                 $show = true;
             }
         }
@@ -57,7 +57,7 @@ function local_lytix_extend_navigation_course($navigation, $course, $context) {
                 navigation_node::TYPE_SETTING,
                 null,
                 null,
-                new pix_icon('t/valid', '')
+                new pix_icon('i/valid', '')
             );
         }
     }
