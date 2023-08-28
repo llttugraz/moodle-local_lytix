@@ -36,6 +36,8 @@ $string['semester_start']                 = 'Beginn des Semesters';
 $string['semester_start_description']     = 'Geben Sie das Datum (Bsp.: 2020-10-01) des Semesterbeginns ein.';
 $string['semester_end']                   = 'Ende des Semesters';
 $string['semester_end_description']       = 'Geben Sie das Datum (Bsp.: 2020-10-01) des Semesterendes ein.';
+$string['last_aggregation_date']          = 'Letztes Aggregationsdatum';
+$string['last_aggregation_date_description']  = 'Datum, an dem die Daten zuletzt aggregiert wurden.';
 $string['course_list']                    = 'Liste der Kurse';
 $string['course_list_description']        = 'Die Liste der Kurs-IDs durch Komma getrennt einfügen (Bsp.: 2,5,7)';
 $string['error_text']                     = '<div class="alert alert-danger">Etwas ist schiefgegangen, bitte Seite neu laden (F5).<br>
