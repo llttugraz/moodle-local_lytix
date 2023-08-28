@@ -36,6 +36,8 @@ $string['semester_start']                 = 'Beginning of semester';
 $string['semester_start_description']     = 'Insert the date (exp.: 2020-10-01) of the beginning of semester.';
 $string['semester_end']                   = 'End of semester';
 $string['semester_end_description']       = 'Insert the date (exp.: 2020-02-28) of the end of semester';
+$string['last_aggregation_date']          = 'Last Aggregation Date';
+$string['last_aggregation_date_description']  = 'Date when the data was last aggregated.';
 $string['course_list']                    = 'List of courses';
 $string['course_list_description']        = 'Insert the list of course IDs separated by comma (exp.: 2,5,7)';
 $string['error_text']                     = '<div class="alert alert-danger">Something went wrong, please reload the page (F5).<br>
