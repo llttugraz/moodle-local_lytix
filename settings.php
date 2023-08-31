@@ -57,7 +57,7 @@ if ($hassiteconfig) {
     
     $settings->add(new admin_setting_configtext('local_lytix/last_aggregation_date',
                                                 get_string('last_aggregation_date', 'local_lytix'),
-                                                get_string('last_aggregation_date_description', 'local_lytix'), '2023-06-01'));
+                                                get_string('last_aggregation_date_description', 'local_lytix'), '2023-09-01'));
 
     $settings->add(new admin_setting_configtextarea('local_lytix/course_list',
         get_string('course_list', 'local_lytix'),
