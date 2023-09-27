@@ -25,6 +25,11 @@
     vertical-align: middle;
 }
 
+#lytix [data-toggle=tooltip] {
+    text-decoration: underline dotted;
+    cursor: help;
+}
+
 #overview .widget {
     min-width: 10rem;
     max-width: 40rem;
