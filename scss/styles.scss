@@ -121,3 +121,23 @@ $h3-padding-y: .25rem;
 .content.widget-error {
     width: 100%;
 }
+
+
+// Workaround for issues with search dropdown on settings page.
+#page-admin-setting-local_lytix {
+    .modal-content {
+        height: calc(100vh - 3.5rem);
+    }
+    .form-inline[data-fieldtype="autocomplete"] {
+        display: flex;
+    }
+    div.form-autocomplete-selection {
+        order: 2;
+    }
+    div.d-md-inline-block {
+        order: 1;
+    }
+    ul.form-autocomplete-suggestions {
+        margin-top: 48px;
+    }
+}

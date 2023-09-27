@@ -100,7 +100,7 @@
     height: calc(100vh - 3.5rem);
 }
 
-#page-admin-setting-local_lytix .form-inline[data-fieldtype="autocomplete"] {
+#page-admin-setting-local_lytix .form-inline[data-fieldtype=autocomplete] {
     display: flex;
 }
 
