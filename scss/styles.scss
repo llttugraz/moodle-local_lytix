@@ -15,8 +15,7 @@ $h4-padding-y: .25rem;
     }
 
     h3 {
-        font-size: 2.4rem;
-        font-weight: 600;
+        font-feature-settings: 'smcp' on;
     }
 
     h4 {
@@ -67,7 +66,11 @@ $h4-padding-y: .25rem;
             );
         & > div {
             margin: 0 2rem $widget-margin-bottom 0;
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
+
     }
 
     .content.widget-error {

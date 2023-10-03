@@ -7,8 +7,7 @@
 }
 
 #lytix h3 {
-    font-size: 2.4rem;
-    font-weight: 600;
+    font-feature-settings: "smcp" on;
 }
 
 #lytix h4 {
@@ -50,6 +49,10 @@
 
 #overview .widgets > div {
     margin: 0 2rem 2rem 0;
+}
+
+#overview .widgets > div:last-child {
+    margin-bottom: 0;
 }
 
 #overview .content.widget-error {
