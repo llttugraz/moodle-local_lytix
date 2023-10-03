@@ -56,6 +56,7 @@ $string['course_list_header'] = 'Course List';
 $string['grade_monitor_header'] = 'Grade Monitor List';
 $string['searcharea'] = 'Courses';
 $string['allareas'] = 'no courses selected';
+$string['cd_desc'] = 'The Creator’s Dashboard visualises data from your MOOC participants. It gives you insight into the activities of your learners.';
 
 // Privacy.
 $string['privacy:metadata'] = 'This plugin does not store any data.';
