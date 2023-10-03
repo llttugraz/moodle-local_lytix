@@ -86,7 +86,7 @@ All widgets should follow the same structure:
 ```
 <div class='lytix-widget'>
 	<div class='title-bar'>
-		<h3>Widget Title</h3>
+		<h4>Widget Title</h4>
 		<span class='info'>…</span>
 	</div>
 	<div class='content'>
