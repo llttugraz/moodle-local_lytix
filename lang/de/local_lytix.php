@@ -54,4 +54,4 @@ $string['course_list_header'] = 'Course List';
 $string['grade_monitor_header'] = 'Grade Monitor List';
 $string['searcharea'] = 'Kurse';
 $string['allareas'] = 'keine Kurse ausgewählt';
-$string['cd_desc'] = 'Das Creator’s Dashboard visualisiert Daten Ihrer MOOC-Teilnehmenden. Sie bekommen dadurch aufschlussreiche Einblicke in die Aktivitäten Ihrer Lernenden.';
+$string['cd_desc'] = 'Das Creator’s Dashboard visualisiert Daten Ihrer MOOC-Teilnehmenden. Sie bekommen dadurch aufschlussreiche Einblicke in die Aktivitäten Ihrer Lernenden. Das Dashboard wird täglich über Nach aktualisiert.';
