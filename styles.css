@@ -6,12 +6,15 @@
     flex-direction: row;
 }
 
-#lytix h2 {
-    font-size: 2.4rem;
-    font-weight: 600;
+#lytix h2 + p {
+    max-width: 46em;
 }
 
 #lytix h3 {
+    font-feature-settings: "smcp" on;
+}
+
+#lytix h4 {
     font-size: 1.3rem;
     line-height: 1.6;
     font-weight: 700;
@@ -23,6 +26,11 @@
 #lytix td,
 #lytix th {
     vertical-align: middle;
+}
+
+#lytix [data-toggle=tooltip] {
+    text-decoration: underline dotted;
+    cursor: help;
 }
 
 #overview .widget {
@@ -45,6 +53,10 @@
 
 #overview .widgets > div {
     margin: 0 2rem 2rem 0;
+}
+
+#overview .widgets > div:last-child {
+    margin-bottom: 0;
 }
 
 #overview .content.widget-error {
@@ -95,7 +107,7 @@
     height: calc(100vh - 3.5rem);
 }
 
-#page-admin-setting-local_lytix .form-inline[data-fieldtype="autocomplete"] {
+#page-admin-setting-local_lytix .form-inline[data-fieldtype=autocomplete] {
     display: flex;
 }
 
@@ -110,3 +122,4 @@
 #page-admin-setting-local_lytix ul.form-autocomplete-suggestions {
     margin-top: 48px;
 }
+

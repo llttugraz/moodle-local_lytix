@@ -1,8 +1,8 @@
 @use 'colors' as *;
 
-$h3-font-size: 1.3rem;
-$h3-line-height: 1.6;
-$h3-padding-y: .25rem;
+$h4-font-size: 1.3rem;
+$h4-line-height: 1.6;
+$h4-padding-y: .25rem;
 
 // selecting by id provides necessary specifity
 #lytix {
@@ -14,29 +14,37 @@ $h3-padding-y: .25rem;
         flex-direction: row;
     }
 
-    h2 {
-        font-size: 2.4rem;
-        font-weight: 600;
+    h2 + p {
+        max-width: 46em;
     }
 
     h3 {
-        font-size: $h3-font-size;
-        line-height: $h3-line-height;
+        font-feature-settings: 'smcp' on;
+    }
+
+    h4 {
+        font-size: $h4-font-size;
+        line-height: $h4-line-height;
         font-weight: 700;
         background-color: $title-background;
-        padding: $h3-padding-y 1rem;
+        padding: $h4-padding-y 1rem;
         margin: 0;
     }
     td,
     th {
         vertical-align: middle;
     }
+
+    [data-toggle=tooltip] {
+        text-decoration: underline dotted;
+        cursor: help;
+    }
 }
 
 #overview {
     $widget-margin-bottom: 2rem;
     $content-height: 14rem;
-    $widget-height: $h3-font-size * $h3-line-height + 2 * $h3-padding-y + $content-height;
+    $widget-height: $h4-font-size * $h4-line-height + 2 * $h4-padding-y + $content-height;
     .widget {
         min-width: 10rem;
         max-width: 40rem;
@@ -62,7 +70,11 @@ $h3-padding-y: .25rem;
             );
         & > div {
             margin: 0 2rem $widget-margin-bottom 0;
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
+
     }
 
     .content.widget-error {
@@ -115,4 +127,24 @@ $h3-padding-y: .25rem;
 
 .content.widget-error {
     width: 100%;
+}
+
+
+// Workaround for issues with search dropdown on settings page.
+#page-admin-setting-local_lytix {
+    .modal-content {
+        height: calc(100vh - 3.5rem);
+    }
+    .form-inline[data-fieldtype="autocomplete"] {
+        display: flex;
+    }
+    div.form-autocomplete-selection {
+        order: 2;
+    }
+    div.d-md-inline-block {
+        order: 1;
+    }
+    ul.form-autocomplete-suggestions {
+        margin-top: 48px;
+    }
 }

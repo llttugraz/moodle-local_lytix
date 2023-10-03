@@ -35,9 +35,12 @@ global $CFG, $PAGE, $OUTPUT, $USER, $DB;
 require_once($CFG->libdir . '/pagelib.php');
 defined('MOODLE_INTERNAL') || die();
 
-$PAGE->requires->js('/local/lytix/js/moment.js', true);
-$PAGE->requires->js('/local/lytix/js/d3.js', true);
-$PAGE->requires->js('/local/lytix/js/d3-scale-chromatic.js', true);
+// TODO: Check again if dependencies can be removed as soon as the planner and/or activities have been updated.
+if (get_config('local_lytix', 'platform') === 'learners_corner') {
+    $PAGE->requires->js('/local/lytix/js/moment.js', true);
+    $PAGE->requires->js('/local/lytix/js/d3.js', true);
+    $PAGE->requires->js('/local/lytix/js/d3-scale-chromatic.js', true);
+}
 
 $courseid = required_param('id', PARAM_INT);
 $course   = get_course($courseid);

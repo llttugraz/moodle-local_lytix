@@ -54,7 +54,7 @@ if ($hassiteconfig) {
     $settings->add(new admin_setting_configtext('local_lytix/semester_end',
                                                 get_string('semester_end', 'local_lytix'),
                                                 get_string('semester_end_description', 'local_lytix'), '2023-02-28'));
-    
+
     $settings->add(new admin_setting_configtext('local_lytix/last_aggregation_date',
                                                 get_string('last_aggregation_date', 'local_lytix'),
                                                 get_string('last_aggregation_date_description', 'local_lytix'), '2023-09-01'));
