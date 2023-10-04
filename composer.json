@@ -1,6 +1,6 @@
 {
     "authors": [
-	    {
+        {
             "name": "Günther Moser",
             "email": "moser@tugraz.at",
             "role": "Maintainer"
@@ -12,10 +12,10 @@
         }
     ],
     "description": "Learning Analytics plugin",
-    "keywords": ["learnerscorner", "LA", "Learning Analytics"], 
+    "keywords": ["learnerscorner", "LA", "Learning Analytics"],
     "name": "llttugraz/moodle-local_lytix",
     "require": {
-        "moodle/moodle": "3.11 - 4.1"
+        "moodle/moodle": "4.1.x"
     },
     "license": "GPL-3.0-or-later"
 }
