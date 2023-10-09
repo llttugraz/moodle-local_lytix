@@ -10,11 +10,12 @@
     max-width: 46em;
 }
 
-#lytix h3 {
+#lytix.cd h3 {
     font-feature-settings: "smcp" on;
 }
 
-#lytix h4 {
+#lytix.cd h4,
+#lytix.lc h3 {
     font-size: 1.3rem;
     line-height: 1.6;
     font-weight: 700;
