@@ -7,7 +7,7 @@ $h4-padding-y: .25rem;
 // selecting by id provides necessary specifity
 #lytix {
     .content.widget-error {
-        opacity: 0.5;
+        opacity: .5;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -18,11 +18,12 @@ $h4-padding-y: .25rem;
         max-width: 46em;
     }
 
-    h3 {
+    &.cd h3 {
         font-feature-settings: 'smcp' on;
     }
 
-    h4 {
+    &.cd h4,
+    &.lc h3 {
         font-size: $h4-font-size;
         line-height: $h4-line-height;
         font-weight: 700;
