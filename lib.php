@@ -42,7 +42,9 @@ function local_lytix_extend_navigation_course($navigation, $course, $context) {
     if (isset($course->id) && $course->id > 1 &&
         in_array($course->id, explode(',', get_config('local_lytix', 'course_list')))) {
         $show = false;
-        if (\local_lytix\helper\plugin_check::is_installed('planner')) {
+        if (((get_config('local_lytix', 'platform') == 'course_dashboard') ||
+                (get_config('local_lytix', 'platform') == 'learners_corner')) &&
+            \local_lytix\helper\plugin_check::is_installed('planner')) {
             $show = true;
         } else {
             $iscreator = \lytix_config\render_view::is_creator($context, $USER->id);

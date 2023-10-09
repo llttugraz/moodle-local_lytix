@@ -21,8 +21,8 @@
  * if you like, and it can span multiple lines.
  *
  * @package    local_lytix
- * @author     Philipp Leitner
- * @copyright  2020 Educational Technologies, Graz, University of Technology
+ * @author     Günther Moser <moser@tugraz.at>
+ * @copyright  2023 Educational Technologies, Graz, University of Technology
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -35,21 +35,28 @@ global $CFG, $PAGE, $OUTPUT, $USER, $DB;
 require_once($CFG->libdir . '/pagelib.php');
 defined('MOODLE_INTERNAL') || die();
 
-// TODO: Check again if dependencies can be removed as soon as the planner and/or activities have been updated.
-if (get_config('local_lytix', 'platform') === 'learners_corner') {
-    $PAGE->requires->js('/local/lytix/js/moment.js', true);
-    $PAGE->requires->js('/local/lytix/js/d3.js', true);
-    $PAGE->requires->js('/local/lytix/js/d3-scale-chromatic.js', true);
-}
-
 $courseid = required_param('id', PARAM_INT);
 $course   = get_course($courseid);
 require_login($course);
+$context = context_course::instance($courseid);
 
 // Simple test to figure out, if learners corner is active in course.
 if (!in_array($course->id, explode(',', get_config('local_lytix', 'course_list')))) {
     $urltogo = new moodle_url('/course/view.php', array('id' => $PAGE->course->id));
     redirect($urltogo, 'There is no Learners Corner in this course');
+}
+
+// TODO: Check again if dependencies can be removed as soon as the planner and/or activities have been updated.
+if (get_config('local_lytix', 'platform') === 'learners_corner') {
+    $PAGE->requires->js('/local/lytix/js/moment.js', true);
+    $PAGE->requires->js('/local/lytix/js/d3.js', true);
+    $PAGE->requires->js('/local/lytix/js/d3-scale-chromatic.js', true);
+} elseif (get_config('local_lytix', 'platform') == 'creators_dashboard') {
+    if (!\lytix_config\render_view::is_creator($context, $USER->id)) {
+        $urltogo = new moodle_url('/course/view.php', array('id' => $PAGE->course->id));
+        redirect($urltogo, 'You do not have the necessary permissions to visit this website.
+         Please contact the course teacher or administrator.');
+    }
 }
 
 $platform = get_config('local_lytix', 'platform');
@@ -63,13 +70,11 @@ $PAGE->set_title($sitetext . " - " . $course->fullname);
 // Display page header.
 echo $OUTPUT->header();
 
-
 if (count(plugin_check::get_installed_plugins()) <= 1) {
     \lytix_basic\basic_render::render();
 }
 
 if (plugin_check::is_installed('logs')) {
-    $context = context_course::instance($courseid);
     \lytix_logs\logger::add($USER->id, $courseid, $context->id,
         \lytix_logs\logger::TYPE_LOAD, \lytix_logs\logger::TYPE_PAGE, $courseid);
 }

@@ -1,44 +1,19 @@
-# local_lytix
+# local_lytix Plugin for Moodle
 
-A plugin for Learning Analytics. The intention is to provide a learning analytics (LA) overview for Coursecreator's, Teachers and Students as well.
-Lytix is the main plugin with several widgets. Each widget is a subplugin and can be added or removed accordingly.
-Each platform we support uses a different constellation of these widgets.
+## Overview
+The `local_lytix` plugin is a comprehensive tool designed to enhance the digital learning experience in Moodle for both educators and students. Emphasizing the concept of Human-Centred Learning Analytics (HCLA), this tool facilitates better organization, learning, and interaction within Moodle.
 
-### Platforms
+## Features
 
-Currently, lytix is provided for 3 moodle instances:
-- Learner's Cornerj (LC) for the TeachCenter (https://tc.tugraz.at/main/), University of Graz (https://learn.moodle.uni-graz.at) and University of Vienna (https://moodle.univie.ac.at)
-- Creator's Dashboard (CD) for iMooX (https://imoox.at/mooc/)
-- Course Dashboard (outdated) is currently not in use and not maintained!
+### Enhanced Interaction
+- Promotes active engagement of users with the dashboard, encouraging both educators and students to interact and organize effectively.
 
-### Subplugins
+### Array of Widgets
+- Offers a range of widgets, including those tailored for task planning and lecture scheduling, ensuring users get a holistic learning experience.
 
-Currently, there are 12 widgets and 3 helper subplugins:
+## Installation
+1. Download the `local_lytix` plugin from the Moodle plugins repository.
+2. Install and activate it in your Moodle instance.
+3. Navigate to the `local_lytix` dashboard and start exploring the features.
 
-- basic (dummy)
-- activity (LC)
-- diary (LC)
-- planner (LC)
-- grademonitor (LC)
-- timeoverview (LC, CD)
-- actions (CD)
-- coursecompletion (CD)
-- completions (CD)
-- participations (CD)
-- measure (outdated)
-- timedetail (outdated)
-
-- config (all)
-- helper (all)
-- logs   (all)
-
-Each platform view can be selected in the plugin settings. A mustache template is then used to provide the correct widgets.
-
-### Settings
-
-There are 4 plugin settings to consider.
-- **platform**: selects the correct platform (TUG, IMX or KF)
-- **semester_start**: Start of the semester. It is relevant for several plugins. This value gets overwritten by the course start.
-- **semester_end**: End of the semester. It is relevant for several plugins. This value gets overwritten by the course end or ignored at iMooX.
-- **course_list**: This setting is a list of courses (ID's). When a course is added here, lytix is enabled for this course.
-- **grademonitor list**: This setting is a list of courses (ID's). When a course is added here, the grademonitor is enabled for this course.
+> **Note**: Ensure you have the required permissions to install and activate the `local_lytix` plugin in your Moodle courses.
