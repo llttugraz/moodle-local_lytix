@@ -29,5 +29,5 @@ $plugin->version   = 2023101000; // The current plugin version (Date: YYYYMMDDXX
 $plugin->maturity  = MATURITY_STABLE;
 $plugin->requires  = 2022112800.00; // Requires this Moodle version 4.1.
 $plugin->component = 'local_lytix'; // Full name of the plugin.
-$plugin->release   = 'v1.2.4';
+$plugin->release   = 'v1.2.5';
 $plugin->supported = [401, 401];
