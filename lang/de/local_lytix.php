@@ -44,8 +44,6 @@ $string['error_text'] = '<div class="alert alert-danger">Etwas ist schiefgegange
 $string['loading_msg'] = 'Lade Daten vom System, bitte warten';
 $string['platform'] = 'Plattform';
 $string['platform_description'] = 'Für welche Plattform? (tug, kfg, imx)';
-$string['grade_monitor_list'] = 'Liste der Kurse mit aktivem Grademonitor';
-$string['grade_monitor_list_description'] = 'Die Liste der Kurs-IDs durch Komma getrennt einfügen (Bsp.: 2,5,7)';
 $string['overview_heading'] = 'Kurzübersicht';
 $string['details_heading'] = 'Detaileinblick';
 $string['add_courses_automatically'] = 'automatisch hinzufügen';

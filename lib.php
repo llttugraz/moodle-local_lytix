@@ -78,9 +78,6 @@ function local_lytix_output_fragment_courselistform(array $args): string {
         case 'courselist':
             $settingname = 'course_list';
             break;
-        case 'grademonitor' :
-            $settingname = 'grade_monitor_list';
-            break;
         default:
             break;
     }
@@ -107,9 +104,6 @@ function local_lytix_output_fragment_courselistformsave(array $args): string {
     switch ($result['setting']) {
         case 'courselist':
             $settingname = 'course_list';
-            break;
-        case 'grademonitor' :
-            $settingname = 'grade_monitor_list';
             break;
         default:
             break;

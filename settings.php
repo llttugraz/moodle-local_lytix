@@ -38,7 +38,6 @@ if ($hassiteconfig) {
             'learners_corner'    => get_string('learners_corner', 'local_lytix'),
             'creators_dashboard' => get_string('creators_dashboard', 'local_lytix'),
             'course_dashboard'   => get_string('course_dashboard', 'local_lytix'),
-            // TODO add more platforms here.
     ];
     $settings->add(new admin_setting_configselect('local_lytix/platform',
                                                   get_string('pluginname', 'local_lytix'), '', 'learner_corner', $names));
@@ -63,14 +62,7 @@ if ($hassiteconfig) {
         get_string('course_list', 'local_lytix'),
         get_string('course_list_description', 'local_lytix'), ''));
 
-    $settings->add(new admin_setting_configtextarea('local_lytix/grade_monitor_list',
-        get_string('grade_monitor_list', 'local_lytix'),
-        get_string('grade_monitor_list_description', 'local_lytix'), ''));
-
     $PAGE->requires->js_call_amd('local_lytix/main', 'initListener');
     $button = "<a href='#' id='courselist' class='btn btn-primary'>Course List</a>";
     $settings->add(new admin_setting_heading('course_list', get_string('course_list_header', 'local_lytix'), $button));
-
-    $button1 = "<a href='#' id='grademonitor' class='btn btn-primary'>Grade Monitor List</a>";
-    $settings->add(new admin_setting_heading('grade_monitor', get_string('grade_monitor_header', 'local_lytix'), $button1));
 }
