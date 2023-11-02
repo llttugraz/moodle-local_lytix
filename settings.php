@@ -49,15 +49,15 @@ if ($hassiteconfig) {
 
     $settings->add(new admin_setting_configtext('local_lytix/semester_start',
                                                 get_string('semester_start', 'local_lytix'),
-                                                get_string('semester_start_description', 'local_lytix'), '2022-10-01'));
+                                                get_string('semester_start_description', 'local_lytix'), '1970-01-01'));
 
     $settings->add(new admin_setting_configtext('local_lytix/semester_end',
                                                 get_string('semester_end', 'local_lytix'),
-                                                get_string('semester_end_description', 'local_lytix'), '2023-02-28'));
+                                                get_string('semester_end_description', 'local_lytix'), '1970-01-01'));
 
     $settings->add(new admin_setting_configtext('local_lytix/last_aggregation_date',
                                                 get_string('last_aggregation_date', 'local_lytix'),
-                                                get_string('last_aggregation_date_description', 'local_lytix'), '2023-09-01'));
+                                                get_string('last_aggregation_date_description', 'local_lytix'), '1970-01-01'));
 
     $settings->add(new admin_setting_configtextarea('local_lytix/course_list',
         get_string('course_list', 'local_lytix'),

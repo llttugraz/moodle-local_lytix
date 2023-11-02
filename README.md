@@ -14,6 +14,7 @@ The `local_lytix` plugin is a comprehensive tool designed to enhance the digital
 ## Installation
 1. Download the `local_lytix` plugin from the Moodle plugins repository.
 2. Install and activate it in your Moodle instance.
+3. Have a look at settings.md file and configure the plugin settings to your needs. (administrator role)
 3. Navigate to the `local_lytix` dashboard and start exploring the features.
 
 > **Note**: Ensure you have the required permissions to install and activate the `local_lytix` plugin in your Moodle courses.
