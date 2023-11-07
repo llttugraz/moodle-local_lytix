@@ -67,14 +67,4 @@ export const initListener = () => {
     element.addEventListener("click", function() {
         showForm('courselist');
     });
-
-    let gradeelement = document.getElementById("grademonitor");
-
-    if (gradeelement === null) {
-        return;
-    }
-
-    gradeelement.addEventListener("click", function() {
-        showForm('grademonitor');
-    });
 };

@@ -44,8 +44,6 @@ $string['error_text'] = '<div class="alert alert-danger">Something went wrong, p
 $string['loading_msg'] = 'Loading data from the system, please wait';
 $string['platform'] = 'Platform';
 $string['platform_description'] = 'For which platform? (tug, kfg, imx)';
-$string['grade_monitor_list'] = 'List of courses with grademonitor enabled';
-$string['grade_monitor_list_description'] = 'Insert the list of course IDs separated by comma (exp.: 2,5,7)';
 
 // For the courselists.
 $string['overview_heading'] = 'Quick Overview';

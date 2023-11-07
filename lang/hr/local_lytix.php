@@ -37,8 +37,6 @@ $string['error_text'] = '<div class="alert alert-danger">Nešto nije u redu, pon
 $string['loading_msg'] = "Učitavam podatke iz sustava, pričekaj";
 $string['platform'] = "Platforma";
 $string['platform_description'] = "Za koju platformu? (tug, kfg, imx)";
-$string['grade_monitor_list'] = "Popis tečajeva s aktiviranim grademonitorom";
-$string['grade_monitor_list_description'] = "Upiši popis ID oznaka tečajeva odvojenih zarezom (npr.: 2,5,7)";
 $string['overview_heading'] = "Brzi pregled";
 $string['details_heading'] = "Detaljni uvid";
 $string['add_courses_automatically'] = "Dodaj automatski";
