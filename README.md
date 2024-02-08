@@ -22,7 +22,7 @@ The `local_lytix` plugin is a comprehensive tool designed to enhance the digital
 ## Installation
 
 1. Download the plugin and extract the files.
-2. Move the extracted folder to your `moodle/mod` directory.
+2. Move the extracted folder to your `moodle/local` directory.
 3. Log in as an admin in Moodle and navigate to `Site Administration > Plugins > Install plugins`.
 4. Follow the on-screen instructions to complete the installation.
 5. Have a look at settings.md file and configure the plugin settings to your needs.
@@ -62,7 +62,7 @@ If your plugin offers API endpoints, document what they return and how to use th
 
 ## Subplugins
 
-If there are any subplugins, provide links and descriptions for each.
+All subplugins are located in the `moodle/local/lytix/modules` directory and can be found [here](https://github.com/llttugraz?tab=repositories&q=lytix_&type=&language=&sort=).
 
 ## Privacy
 
