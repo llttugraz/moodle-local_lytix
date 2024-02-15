@@ -40,7 +40,7 @@ The `local_lytix` plugin is a comprehensive tool designed to enhance the digital
 
 - Promotes active engagement of users with the dashboard, encouraging both educators and students to interact and organize effectively.
 - Offers a range of widgets, including those tailored for task planning and lecture scheduling, ensuring users get a holistic learning experience.
-- [list of subplugins](https://github.com/llttugraz?tab=repositories)
+- [list of subplugins](https://github.com/llttugraz?tab=repositories&q=lytix_&type=&language=&sort=)
 
 ## Configuration
 
