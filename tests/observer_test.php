@@ -26,15 +26,11 @@
 namespace local_lytix;
 
 use backup;
-use backup_controller;
-use restore_controller;
-use restore_dbops;
 
 defined('MOODLE_INTERNAL') || die();
 global $CFG;
 
 require_once($CFG->dirroot . '/backup/util/includes/backup_includes.php');
-require_once($CFG->dirroot . '/backup/util/includes/restore_includes.php');
 
 /**
  * Testclass for the observer
