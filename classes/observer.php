@@ -52,7 +52,10 @@ class observer {
                 if (empty($courselist)) {
                     $courselist = $event->courseid;
                 } else {
-                    $courselist .= ',' . $event->courseid;
+                    $courses = explode(',', $courselist);
+                    if (!in_array($event->courseid, $courses)) {
+                        $courselist .= ',' . $event->courseid;
+                    }
                 }
 
                 set_config('course_list', $courselist, 'local_lytix');

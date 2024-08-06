@@ -25,6 +25,17 @@
 
 namespace local_lytix;
 
+use backup;
+use backup_controller;
+use restore_controller;
+use restore_dbops;
+
+defined('MOODLE_INTERNAL') || die();
+global $CFG;
+
+require_once($CFG->dirroot . '/backup/util/includes/backup_includes.php');
+require_once($CFG->dirroot . '/backup/util/includes/restore_includes.php');
+
 /**
  * Testclass for the observer
  * @coversDefaultClass \local_lytix\observer
@@ -46,16 +57,64 @@ class observer_test extends \advanced_testcase {
      * @return void
      * @throws \dml_exception
      */
-    public function test_create_course_observer() {
+    public function test_course_created_observer() {
         // Generate a course without option enabled.
         $this->getDataGenerator()->create_course();
         $courselist = get_config('local_lytix', 'course_list');
-        self::assertFalse((boolean) $courselist, "Should be false.");
+        $this->assertFalse((boolean) $courselist, "Should be false.");
 
         // Generate a course with option enabled.
         set_config('add_courses_automatically', 1, 'local_lytix');
-        $this->getDataGenerator()->create_course();
+        $course = $this->getDataGenerator()->create_course();
         $courselist = get_config('local_lytix', 'course_list');
-        self::assertTrue((boolean) $courselist, "Should be true.");
+        $this->assertEquals($course->id, $courselist); // New course added.
+    }
+
+    /**
+     * Tests the course restored observer.
+     *
+     * @covers ::add_course
+     * @return void
+     * @throws \dml_exception
+     */
+    public function test_course_restored_observer() {
+        $course1 = $this->getDataGenerator()->create_course();
+
+        set_config('add_courses_automatically', 1, 'local_lytix');
+
+        $course2 = $this->getDataGenerator()->create_course();
+        $courselist = get_config('local_lytix', 'course_list');
+        $this->assertEquals($course2->id, $courselist); // New course added.
+
+        $otherarray = [
+            'type' => backup::TYPE_1COURSE,
+            'target' => backup::TARGET_NEW_COURSE,
+            'mode' => backup::MODE_GENERAL,
+            'operation' => backup::OPERATION_RESTORE,
+            'samesite' => true,
+        ];
+
+        $event = \core\event\course_restored::create([
+            'objectid' => $course1->id,
+            'userid' => get_admin()->id,
+            'context' => \context_course::instance($course1->id),
+            'other' => $otherarray,
+        ]);
+        $event->trigger();
+
+        $courselist = get_config('local_lytix', 'course_list');
+        $this->assertEquals($course2->id . ',' . $course1->id, $courselist); // Restored course added.
+
+        $event = \core\event\course_restored::create([
+            'objectid' => $course2->id,
+            'userid' => get_admin()->id,
+            'context' => \context_course::instance($course2->id),
+            'other' => $otherarray,
+        ]);
+        $event->trigger();
+
+        $courselist = get_config('local_lytix', 'course_list');
+        $this->assertEquals($course2->id . ',' . $course1->id, $courselist); // Restored course already present.
+
     }
 }

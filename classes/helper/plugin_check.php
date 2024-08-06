@@ -39,7 +39,7 @@ class plugin_check {
      */
     public static function get_installed_plugins() {
 
-        $plugins = array();
+        $plugins = [];
         foreach (core_component::get_plugin_list('lytix') as $plugin => $plugindir) {
             if (get_string_manager()->string_exists('pluginname', 'lytix_' . $plugin)) {
                 $strpluginname = get_string('pluginname', 'lytix_' . $plugin);

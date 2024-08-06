@@ -27,10 +27,14 @@
  */
 defined('MOODLE_INTERNAL') || die();
 
-$observers = array(
+$observers = [
 
-        array(
+        [
                 'eventname' => '\core\event\course_created',
                 'callback'  => 'local_lytix\observer::add_course',
-        ),
-);
+        ],
+        [
+                'eventname' => '\core\event\course_restored',
+                'callback'  => 'local_lytix\observer::add_course',
+        ],
+];
