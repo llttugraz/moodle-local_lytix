@@ -27,29 +27,28 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-// Plugin.
-$string['pluginname'] = 'LYTIX';
-$string['learners_corner'] = 'Learner’s Corner';
-$string['creators_dashboard'] = 'Creator’s Dashboard';
-$string['course_dashboard'] = 'Course Dashboard';
-$string['semester_start'] = 'Beginn des Semesters';
-$string['semester_start_description'] = 'Geben Sie das Datum (Bsp.: 2020-10-01) des Semesterbeginns ein.';
-$string['semester_end'] = 'Ende des Semesters';
-$string['semester_end_description'] = 'Geben Sie das Datum (Bsp.: 2020-10-01) des Semesterendes ein.';
-$string['last_aggregation_date'] = 'Letztes Aggregationsdatum';
-$string['last_aggregation_date_description'] = 'Datum, an dem die Daten zuletzt aggregiert wurden.';
-$string['course_list'] = 'Liste der Kurse';
-$string['course_list_description'] = 'Die Liste der Kurs-IDs durch Komma getrennt einfügen (Bsp.: 2,5,7)';
-$string['error_text'] = '<div class="alert alert-danger">Etwas ist schiefgegangen, bitte Seite neu laden.<br>Falls dieser Fehler dann noch immer passiert, wenden Sie sich bitte an Ihren Administrator.</div>';
-$string['loading_msg'] = 'Lade Daten vom System, bitte warten';
-$string['platform'] = 'Plattform';
-$string['platform_description'] = 'Für welche Plattform? (tug, kfg, imx)';
-$string['overview_heading'] = 'Kurzübersicht';
-$string['details_heading'] = 'Detaileinblick';
 $string['add_courses_automatically'] = 'automatisch hinzufügen';
 $string['add_courses_automatically_desc'] = 'Wenn als Plattform <i>Creator’s Dashboard</i> gesetzt ist, wird es dank dieser Option bei neuen Kursen automatisch aktiviert.';
-$string['course_list_header'] = 'Course List';
-$string['grade_monitor_header'] = 'Grade Monitor List';
-$string['searcharea'] = 'Kurse';
 $string['allareas'] = 'keine Kurse ausgewählt';
 $string['cd_desc'] = 'Das Creator’s Dashboard visualisiert Daten Ihrer MOOC-Teilnehmenden. Sie bekommen dadurch aufschlussreiche Einblicke in die Aktivitäten Ihrer Lernenden. Das Dashboard wird täglich über Nacht aktualisiert.';
+$string['course_dashboard'] = 'Course Dashboard';
+$string['course_list'] = 'Liste der Kurse';
+$string['course_list_description'] = 'Die Liste der Kurs-IDs durch Komma getrennt einfügen (Bsp.: 2,5,7)';
+$string['course_list_header'] = 'Course List';
+$string['creators_dashboard'] = 'Creator’s Dashboard';
+$string['details_heading'] = 'Detaileinblick';
+$string['error_text'] = '<div class="alert alert-danger">Etwas ist schiefgegangen, bitte Seite neu laden.<br>Falls dieser Fehler dann noch immer passiert, wenden Sie sich bitte an Ihren Administrator.</div>';
+$string['grade_monitor_header'] = 'Grade Monitor List';
+$string['last_aggregation_date'] = 'Letztes Aggregationsdatum';
+$string['last_aggregation_date_description'] = 'Datum, an dem die Daten zuletzt aggregiert wurden.';
+$string['learners_corner'] = 'Learner’s Corner';
+$string['loading_msg'] = 'Lade Daten vom System, bitte warten';
+$string['overview_heading'] = 'Kurzübersicht';
+$string['platform'] = 'Plattform';
+$string['platform_description'] = 'Für welche Plattform? (tug, kfg, imx)';
+$string['pluginname'] = 'LYTIX';
+$string['searcharea'] = 'Kurse';
+$string['semester_end'] = 'Ende des Semesters';
+$string['semester_end_description'] = 'Geben Sie das Datum (Bsp.: 2020-10-01) des Semesterendes ein.';
+$string['semester_start'] = 'Beginn des Semesters';
+$string['semester_start_description'] = 'Geben Sie das Datum (Bsp.: 2020-10-01) des Semesterbeginns ein.';

@@ -31,7 +31,7 @@ use local_lytix\helper\plugin_check;
  * Testclass for plugin_check
  * @coversDefaultClass \local_lytix\helper\plugin_check
  */
-class plugin_check_test extends \advanced_testcase {
+final class plugin_check_test extends \advanced_testcase {
 
     /**
      * Test setup.
@@ -47,7 +47,7 @@ class plugin_check_test extends \advanced_testcase {
      * @return void
      * @throws \coding_exception
      */
-    public function test_get_installed_plugins() {
+    public function test_get_installed_plugins(): void {
         $list = plugin_check::get_installed_plugins();
         self::assertIsArray($list, "No array provided");
         self::assertArrayHasKey('basic', $list, "Basic module should always be installed");
@@ -60,7 +60,7 @@ class plugin_check_test extends \advanced_testcase {
      * @return void
      * @throws \coding_exception
      */
-    public function test_is_installed() {
+    public function test_is_installed(): void {
         $active = plugin_check::is_installed('basic');
         self::assertTrue((boolean) $active, "This moudule should always exist!");
 

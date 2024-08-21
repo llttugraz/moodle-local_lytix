@@ -19,30 +19,28 @@
  *
  * @package   local_lytix
  * @copyright 2023 Educational Technologies, Graz, University of Technology
- * @license   http:www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-$string['pluginname'] = "LYTIX";
-$string['learners_corner'] = "Učenički ugao";
-$string['creators_dashboard'] = "Kreatorska komandna tabla";
-$string['course_dashboard'] = "Komandna tabla kursa";
-$string['semester_start'] = "Početak semestra";
-$string['semester_start_description'] = "Upiši datum (npr.: 2020-10-01) početka semestra.";
-$string['semester_end'] = "Kraj semestra";
-$string['semester_end_description'] = "Upiši datum (npr.: 2020-02-28) kraja semestra";
-$string['course_list'] = "Lista kurseva";
-$string['course_list_description'] = "Upiši listu ID oznaka kurseva odvojenih zarezom (npr.: 2,5,7)";
-$string['error_text'] = '<div class="alert alert-danger">Nešto nije uredu, ponovno učitaj stranicu (F5).<br>
- Ako se ova greška ponovi molimo kontaktiraj administratora.</div>';
 
-$string['loading_msg'] = "Učitavam podatke iz sistema, pričekaj";
-$string['platform'] = "Platforma";
-$string['platform_description'] = "Za koju platformu? (tug, kfg, imx)";
-$string['overview_heading'] = "Brzi pregled";
-$string['details_heading'] = "Detaljni uvid";
 $string['add_courses_automatically'] = "Dodaj automatski";
 $string['add_courses_automatically_desc'] = "Dodaj „Kreatorska komandna tabla“ automatski u nove kurseve. (Platforma mora biti postavljena na „Kreatorska komandna tabla“)";
-
-$string['course_list_header'] = "Lista kurseva";
-$string['grade_monitor_header'] = "Lista Grade Monitora";
-$string['searcharea'] = "Kursevi";
 $string['allareas'] = "nije izabran nijedan kurs";
+$string['course_dashboard'] = "Komandna tabla kursa";
+$string['course_list'] = "Lista kurseva";
+$string['course_list_description'] = "Upiši listu ID oznaka kurseva odvojenih zarezom (npr.: 2,5,7)";
+$string['course_list_header'] = "Lista kurseva";
+$string['creators_dashboard'] = "Kreatorska komandna tabla";
+$string['details_heading'] = "Detaljni uvid";
+$string['error_text'] = '<div class="alert alert-danger">Nešto nije uredu, ponovno učitaj stranicu (F5).<br> Ako se ova greška ponovi molimo kontaktiraj administratora.</div>';
+$string['grade_monitor_header'] = "Lista Grade Monitora";
+$string['learners_corner'] = "Učenički ugao";
+$string['loading_msg'] = "Učitavam podatke iz sistema, pričekaj";
+$string['overview_heading'] = "Brzi pregled";
+$string['platform'] = "Platforma";
+$string['platform_description'] = "Za koju platformu? (tug, kfg, imx)";
+$string['pluginname'] = "LYTIX";
+$string['searcharea'] = "Kursevi";
+$string['semester_end'] = "Kraj semestra";
+$string['semester_end_description'] = "Upiši datum (npr.: 2020-02-28) kraja semestra";
+$string['semester_start'] = "Početak semestra";
+$string['semester_start_description'] = "Upiši datum (npr.: 2020-10-01) početka semestra.";

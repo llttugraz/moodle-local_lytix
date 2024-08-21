@@ -19,9 +19,8 @@
  *
  * @package   lytix_basic
  * @copyright 2023 Educational Technologies, Graz, University of Technology
- * @license   http:www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['pluginname'] = 'Lytix Basic';
-
 $string['no_plugins'] = 'Anscheinend sind keine Plugins installiert. Bitte kontaktieren Sie den Administrator.';
+$string['pluginname'] = 'Lytix Basic';

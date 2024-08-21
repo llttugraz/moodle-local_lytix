@@ -36,7 +36,7 @@ require_once($CFG->dirroot . '/backup/util/includes/backup_includes.php');
  * Testclass for the observer
  * @coversDefaultClass \local_lytix\observer
  */
-class observer_test extends \advanced_testcase {
+final class observer_test extends \advanced_testcase {
 
     /**
      * Test setup.
@@ -53,7 +53,7 @@ class observer_test extends \advanced_testcase {
      * @return void
      * @throws \dml_exception
      */
-    public function test_course_created_observer() {
+    public function test_course_created_observer(): void {
         // Generate a course without option enabled.
         $this->getDataGenerator()->create_course();
         $courselist = get_config('local_lytix', 'course_list');
@@ -73,7 +73,7 @@ class observer_test extends \advanced_testcase {
      * @return void
      * @throws \dml_exception
      */
-    public function test_course_restored_observer() {
+    public function test_course_restored_observer(): void {
         $course1 = $this->getDataGenerator()->create_course();
 
         set_config('add_courses_automatically', 1, 'local_lytix');

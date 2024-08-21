@@ -30,7 +30,7 @@ namespace lytix_basic;
  *
  * @coversDefaultClass  \lytix_basic\basic_render
  */
-class basic_render_test extends \advanced_testcase {
+final class basic_render_test extends \advanced_testcase {
     /**
      * Sets up course for tests.
      */
@@ -45,7 +45,7 @@ class basic_render_test extends \advanced_testcase {
      * @return void
      * @throws \coding_exception
      */
-    public function test_render_learners_corner_student_view() {
+    public function test_render_learners_corner_student_view(): void {
         $this->resetAfterTest();
 
         $out = '<div class="alert alert-warning">' . get_string('no_plugins', 'lytix_basic') . '</div>';

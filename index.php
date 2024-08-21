@@ -46,7 +46,7 @@ if (!in_array($course->id, explode(',', get_config('local_lytix', 'course_list')
     redirect($urltogo, 'There is no Learners Corner in this course');
 }
 
-// TODO: Check again if dependencies can be removed as soon as the planner and/or activities have been updated.
+// ToDo: Check again if dependencies can be removed as soon as the planner and/or activities have been updated.
 if (get_config('local_lytix', 'platform') === 'learners_corner') {
     $PAGE->requires->js('/local/lytix/js/moment.js', true);
     $PAGE->requires->js('/local/lytix/js/d3.js', true);
