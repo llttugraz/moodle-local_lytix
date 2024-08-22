@@ -50,17 +50,17 @@ class courselist_form extends \moodleform {
         $mform->setType('setting', PARAM_TEXT);
 
         $searchareas = get_courses('all');
-        $areanames   = array();
+        $areanames   = [];
         foreach ($searchareas as $areaid => $searcharea) {
             if ($areaid == 1) {
                 continue;
             }
             $areanames[$areaid] = $areaid . ':' . $searcharea->fullname . '(' . $searcharea->shortname . ')';
         }
-        $options = array(
+        $options = [
                 'multiple'          => true,
                 'noselectionstring' => get_string('allareas', 'local_lytix'),
-        );
+        ];
         $mform->addElement('autocomplete', 'areasids', get_string('searcharea', 'local_lytix'), $areanames, $options);
         $mform->disable_form_change_checker();
     }

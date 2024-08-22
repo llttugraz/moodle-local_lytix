@@ -27,8 +27,6 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['pluginname'] = 'Lytix Basic';
-
 $string['no_plugins'] = 'It seems that no plugins are installed. Please contact your administrator.';
-
+$string['pluginname'] = 'Lytix Basic';
 $string['privacy:metadata'] = 'This plugin does not store any data.';

@@ -32,7 +32,7 @@ use local_lytix\privacy\provider;
  *
  * @coversDefaultClass  \local_lytix\privacy\provider
  */
-class provider_test extends \advanced_testcase {
+final class provider_test extends \advanced_testcase {
 
     /**
      * This plugin does not store any data by itself, so only a null provider is needed.
@@ -40,7 +40,7 @@ class provider_test extends \advanced_testcase {
      * @covers ::get_reason
      * @return void
      */
-    public function test_get_reason() {
+    public function test_get_reason(): void {
         $this->resetAfterTest();
 
         $this->assertTrue(is_subclass_of(provider::class, '\core_privacy\local\metadata\null_provider'));

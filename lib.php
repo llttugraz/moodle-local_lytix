@@ -83,10 +83,10 @@ function local_lytix_output_fragment_courselistform(array $args): string {
     }
 
     $courses = explode(',', get_config('local_lytix', $settingname));
-    $data    = array(
+    $data    = [
             'areasids' => $courses,
-            'setting'  => $args['setting']
-    );
+            'setting'  => $args['setting'],
+    ];
     $form    = new \local_lytix\forms\courselist_form();
     $form->set_data($data);
     return $form->render();

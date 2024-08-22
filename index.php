@@ -42,25 +42,25 @@ $context = context_course::instance($courseid);
 
 // Simple test to figure out, if learners corner is active in course.
 if (!in_array($course->id, explode(',', get_config('local_lytix', 'course_list')))) {
-    $urltogo = new moodle_url('/course/view.php', array('id' => $PAGE->course->id));
+    $urltogo = new moodle_url('/course/view.php', ['id' => $PAGE->course->id]);
     redirect($urltogo, 'There is no Learners Corner in this course');
 }
 
-// TODO: Check again if dependencies can be removed as soon as the planner and/or activities have been updated.
+// ToDo: Check again if dependencies can be removed as soon as the planner and/or activities have been updated.
 if (get_config('local_lytix', 'platform') === 'learners_corner') {
     $PAGE->requires->js('/local/lytix/js/moment.js', true);
     $PAGE->requires->js('/local/lytix/js/d3.js', true);
     $PAGE->requires->js('/local/lytix/js/d3-scale-chromatic.js', true);
-} elseif (get_config('local_lytix', 'platform') == 'creators_dashboard') {
+} else if (get_config('local_lytix', 'platform') == 'creators_dashboard') {
     if (!\lytix_config\render_view::is_creator($context, $USER->id)) {
-        $urltogo = new moodle_url('/course/view.php', array('id' => $PAGE->course->id));
+        $urltogo = new moodle_url('/course/view.php', ['id' => $PAGE->course->id]);
         redirect($urltogo, 'You do not have the necessary permissions to visit this website.
          Please contact the course teacher or administrator.');
     }
 }
 
 $platform = get_config('local_lytix', 'platform');
-$PAGE->set_url(new moodle_url('/local/lytix/index.php', array('id' => $course->id)));
+$PAGE->set_url(new moodle_url('/local/lytix/index.php', ['id' => $course->id]));
 $PAGE->set_context(context_course::instance($course->id));
 $PAGE->set_heading($course->fullname);
 $PAGE->set_pagelayout('incourse');
