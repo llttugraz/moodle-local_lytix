@@ -35,6 +35,7 @@ final class basic_render_test extends \advanced_testcase {
      * Sets up course for tests.
      */
     public function setUp(): void {
+        parent::setUp();
         $this->resetAfterTest();
         $this->setAdminUser();
     }

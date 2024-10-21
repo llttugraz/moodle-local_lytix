@@ -42,6 +42,7 @@ final class observer_test extends \advanced_testcase {
      * Test setup.
      */
     public function setUp(): void {
+        parent::setUp();
         $this->resetAfterTest();
         set_config('platform', 'creators_dashboard', 'local_lytix');
     }
