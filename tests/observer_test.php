@@ -48,13 +48,16 @@ final class observer_test extends \advanced_testcase {
     }
 
     /**
-     * Tests the course created observer.
+     * Tests the course created observer and cleanup::delete_entries.
      *
      * @covers ::add_course
+     * @covers \local_lytix\cleanup\cleanup::delete_entries
      * @return void
      * @throws \dml_exception
      */
     public function test_course_created_observer(): void {
+
+        global $DB;
         // Generate a course without option enabled.
         $this->getDataGenerator()->create_course();
         $courselist = get_config('local_lytix', 'course_list');
@@ -65,6 +68,17 @@ final class observer_test extends \advanced_testcase {
         $course = $this->getDataGenerator()->create_course();
         $courselist = get_config('local_lytix', 'course_list');
         $this->assertEquals($course->id, $courselist); // New course added.
+
+        $user = $this->getDataGenerator()->create_user();
+        // Add table entries to lytix_basic.
+        $dummyuserid = $user->id + 1;
+        $DB->insert_record('lytix_basic', ['courseid' => $course->id, 'userid' => $user->id]);
+        $DB->insert_record('lytix_basic', ['courseid' => $course->id, 'userid' => $dummyuserid]);
+
+        delete_user($user, false);
+        $this->assertEquals(  1, $DB->count_records('lytix_basic'));
+        delete_course($course->id, false);
+        $this->assertEquals(0, $DB->count_records('lytix_basic', ['courseid' => $course->id]));
     }
 
     /**
