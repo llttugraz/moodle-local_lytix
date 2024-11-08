@@ -15,7 +15,7 @@ The `local_lytix` plugin is a comprehensive tool designed to enhance the digital
 ## Requirements
 
 - Supported Moodle Version: 4.1 - 4.5
-- Supported PHP Version:    7.4 - 8.2
+- Supported PHP Version:    7.4 - 8.3
 - Supported Databases:      MariaDB, PostgreSQL
 - Supported Moodle Themes:  Boost
 
@@ -50,12 +50,12 @@ them to specific existing activities like quizzes, which students can then mark 
 `Course Dashboard` can also be seen by both types of users, students can see their score and how it compares to other participants percentage-wise. Teachers in this mode again have additional data on activity completion by students and time-tracking details.
 
 ## Dependencies
-- [lytix_config](https://github.com/llttugraz/moodle-lytix_config)
-- [lytix_logs](https://github.com/llttugraz/moodle-lytix_logs)
+
+No formal dependencies. However, the usage of the described operation modes above require the specified subplugins below.
 
 ## Subplugins
 
-All subplugins are located in the `moodle/local/lytix/modules` directory and can be found [here](https://github.com/llttugraz?tab=repositories&q=lytix_&type=&language=&sort=).
+All subplugins have to be located in the `moodle/local/lytix/modules` directory and can be found [here](https://github.com/llttugraz?tab=repositories&q=lytix_&type=&language=&sort=).
 
 For `Learner's corner`:
 
