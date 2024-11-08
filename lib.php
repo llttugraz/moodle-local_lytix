@@ -136,9 +136,9 @@ function local_lytix_pre_course_delete(stdClass $course) {
     $courselist = get_config('local_lytix', 'course_list');
     $courses = explode(',', $courselist);
     if (in_array($course->id, $courses)) {
+        cleanup::delete_entries("course", $course->id);
         $courses = array_diff($courses, [$course->id]);
         $courselist = implode(',', $courses);
         set_config('course_list', $courselist, 'local_lytix');
-        cleanup::delete_entries("course", $course->id);
     }
 }
