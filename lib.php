@@ -26,6 +26,8 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+use local_lytix\cleanup\cleanup;
+
 /**
  * Extended navigation.
  * @param \navigation_node $navigation
@@ -111,4 +113,32 @@ function local_lytix_output_fragment_courselistformsave(array $args): string {
     $string = ($result['areasids'] == '_qf__force_multiselect_submission') ? '' : implode(',', $result['areasids']);
     set_config($settingname, $string, 'local_lytix');
     return '';
+}
+
+/**
+ * Callback to remove entries in tables of all subplugins for deleted users.
+ *
+ * @param stdClass $user
+ * @throws dml_exception
+ */
+function local_lytix_pre_user_delete(stdClass $user) {
+    cleanup::delete_entries("user", $user->id);
+}
+
+/**
+ * Callback to remove entries in tables of all subplugins for deleted courses.
+ *
+ * @param stdClass $course
+ * @throws dml_exception
+ */
+function local_lytix_pre_course_delete(stdClass $course) {
+
+    $courselist = get_config('local_lytix', 'course_list');
+    $courses = explode(',', $courselist);
+    if (in_array($course->id, $courses)) {
+        $courses = array_diff($courses, [$course->id]);
+        $courselist = implode(',', $courses);
+        set_config('course_list', $courselist, 'local_lytix');
+        cleanup::delete_entries("course", $course->id);
+    }
 }
