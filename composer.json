@@ -15,7 +15,7 @@
     "keywords": ["learnerscorner", "LA", "Learning Analytics"],
     "name": "llttugraz/moodle-local_lytix",
     "require": {
-        "moodle/moodle": "4.1 - 4.4"
+        "moodle/moodle": "4.1 - 4.5"
     },
     "license": "GPL-3.0-or-later"
 }

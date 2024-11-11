@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<libraries>
+    <library>
+        <location>js/d3.js</location>
+        <name>D3</name>
+        <version>6.0.0</version>
+        <license>ISC License</license>
+        <licenseversion></licenseversion>
+    </library>
+</libraries>

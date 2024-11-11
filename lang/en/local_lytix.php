@@ -53,3 +53,4 @@ $string['semester_end'] = 'End of semester';
 $string['semester_end_description'] = 'Insert the date (exp.: 2020-02-28) of the end of semester';
 $string['semester_start'] = 'Beginning of semester';
 $string['semester_start_description'] = 'Insert the date (exp.: 2020-10-01) of the beginning of semester.';
+$string['subplugintype_lytix_plural'] = 'Lytices';

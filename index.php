@@ -83,6 +83,8 @@ if (plugin_check::is_installed('config')) {
     $render = new \lytix_config\render_view();
     $render->render($course, $USER);
 }
-
+// Moodle version is needed in JS of lytix_planner.
+$version = get_config('core', 'version');
+$PAGE->requires->js_init_code("M.cfg.version = '{$version}';");
 // Display page footer.
 echo $OUTPUT->footer();
