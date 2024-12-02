@@ -46,3 +46,4 @@ $string['semester_start'] = "Početak semestra";
 $string['semester_start_description'] = "Upiši datum (npr.: 2020-10-01) početka semestra.";
 $string['subplugintype_lytix'] = 'Lytix';
 $string['subplugintype_lytix_plural'] = 'Lytix';
+
