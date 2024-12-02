@@ -52,4 +52,5 @@ $string['semester_end'] = 'Ende des Semesters';
 $string['semester_end_description'] = 'Geben Sie das Datum (Bsp.: 2020-10-01) des Semesterendes ein.';
 $string['semester_start'] = 'Beginn des Semesters';
 $string['semester_start_description'] = 'Geben Sie das Datum (Bsp.: 2020-10-01) des Semesterbeginns ein.';
-$string['subplugintype_lytix_plural'] = 'Lytices';
+$string['subplugintype_lytix'] = 'Lytix';
+$string['subplugintype_lytix_plural'] = 'Lytix';
