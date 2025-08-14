@@ -15,16 +15,12 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * This is a one-line short description of the file.
+ * Language file en.
  *
- * You can have a rather longer description of the file as well,
- * if you like, and it can span multiple lines.
- *
- * @package    local_lytix
- * @category   backup
- * @author     Philipp Leitner
- * @copyright  2020 Educational Technologies, Graz, University of Technology
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package local_lytix
+ * @author Moodle plugin: Language strings translator (local_translatelangstr) - automatically generated file
+ * @copyright 2025 Educational Technologies, Graz, University of Technology
+ * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 $string['add_courses_automatically'] = 'Add automatically';
@@ -50,8 +46,8 @@ $string['pluginname'] = 'LYTIX';
 $string['privacy:metadata'] = 'This plugin does not store any data.';
 $string['searcharea'] = 'Courses';
 $string['semester_end'] = 'End of semester';
-$string['semester_end_description'] = 'Insert the date (exp.: 2020-02-28) of the end of semester';
+$string['semester_end_description'] = 'Insert the date (exp.: 2020-02-28) of the end of the semester';
 $string['semester_start'] = 'Beginning of semester';
-$string['semester_start_description'] = 'Insert the date (exp.: 2020-10-01) of the beginning of semester.';
+$string['semester_start_description'] = 'Insert the date (exp.: 2020-10-01) of the beginning of the semester.';
 $string['subplugintype_lytix'] = 'Lytix';
 $string['subplugintype_lytix_plural'] = 'Lytix';
