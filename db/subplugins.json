@@ -1,5 +1,8 @@
 {
   "plugintypes": {
     "lytix": "local/lytix/modules"
+  },
+  "subplugintypes": {
+    "lytix": "modules"
   }
 }
